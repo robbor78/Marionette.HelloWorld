@@ -3,6 +3,8 @@ import Marionette from 'backbone.marionette';
 import tpl from './AppLayout.html';
 import ContentView1 from './ContentView1';
 import ContentView2 from './ContentView2';
+import ContentModel1 from './ContentModel1';
+
 
 const app$ = Backbone.Radio.channel('app');
 
@@ -25,7 +27,8 @@ export default Marionette.View.extend({
 
   showView1() {
     console.log('AppLayout showView1');
-    this.showChildView('content', new ContentView1());
+    var model = new ContentModel1({ title: 'new title' });
+    this.showChildView('content', new ContentView1({ model: model }));
   },
 
   showView2() {
