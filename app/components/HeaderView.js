@@ -7,7 +7,7 @@ const app$ = Backbone.Radio.channel('app');
 export default Marionette.View.extend({
 
   template: _.template(tpl),//'#item-template',//
-  el: '#topview', //view is displayed in the DOM el(ement)
+  // el: '#topview', //view is displayed in the DOM el(ement)
 
   ui: {
     view1selected: '#button-view1',
